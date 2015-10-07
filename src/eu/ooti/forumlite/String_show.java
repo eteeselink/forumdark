@@ -4,7 +4,7 @@ import static java.lang.System.out;
 
 import com.googlecode.lanterna.screen.Screen;
 
-public class String_show implements AutoCloseable {
+public class String_show {
 	public static void string_show  (String str)
 	{
 		
@@ -13,7 +13,6 @@ public class String_show implements AutoCloseable {
 			int result[][] = {{0,0,0,0,0},{0,1,1,1,0},{0,1,0,1,0},{0,1,1,1,0},{0,0,0,0,0}};
 			Display.display0(result);
 		}
-		
 		/*for( int i = 0; i<5; ++i)
 		{
 			for(int j=0; j<5; ++j)
@@ -22,10 +21,5 @@ public class String_show implements AutoCloseable {
 			}
 			out.println();
 		}*/
-		
-	}
-	
-	public void close() throws Exception {
-		screen.stopScreen();
 	}
 }
