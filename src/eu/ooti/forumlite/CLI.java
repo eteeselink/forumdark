@@ -16,8 +16,9 @@ public class CLI {
 
 	/**
 	 * @param args
+	 * @throws InterruptedException 
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		boolean exit = false;
 		while(!exit){
 			System.out.print("Input command: ");
@@ -32,7 +33,12 @@ public class CLI {
 			if(command.equalsIgnoreCase("show")){
 //				String_show show = new String_show();
 //				show.string_show(arguments.get(1));	
-				String_show.string_show(arguments.get(1));
+				try {
+					String_show.string_show(arguments.get(1));
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
 			
 			if (command.equalsIgnoreCase("movie")){
