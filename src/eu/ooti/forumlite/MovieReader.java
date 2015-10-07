@@ -10,7 +10,7 @@ public class MovieReader {
 		 BufferedReader br = null;
 	        String strLine = "";
 	        try {
-	            br = new BufferedReader( new FileReader("files\\Movie1.txt"));
+	            br = new BufferedReader( new FileReader("\\files\\Movie1.txt"));
 	            while( (strLine = br.readLine()) != null){
 	                System.out.println(strLine);
 	                String_show.string_show(strLine);
