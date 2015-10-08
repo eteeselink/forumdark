@@ -32,30 +32,31 @@ public class CLI {
 			System.out.println("Input >> " + strInput);
 			//multiple tokens on line
 			List<String> arguments = new ArrayList<>();
-			arguments = extractArgs(strInput);
-			
-			String command = arguments.get(0);
-			if(command.equalsIgnoreCase("show")){
-//				String_show show = new String_show();
-//				show.string_show(arguments.get(1));	
-//				if(show == null){
-//					show = new String_show();
-//				}
-//				show.string_show(arguments.get(1));
-				try {
-					String_show.string_show(arguments.get(1));
-				} catch (Exception e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
+			if(!strInput.isEmpty()){
+				arguments = extractArgs(strInput);
+				String command = arguments.get(0);
+				if(command.equalsIgnoreCase("show")){
+	//				String_show show = new String_show();
+	//				show.string_show(arguments.get(1));	
+	//				if(show == null){
+	//					show = new String_show();
+	//				}
+	//				show.string_show(arguments.get(1));
+					try {
+						String_show.string_show(arguments.get(1));
+					} catch (Exception e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
 				}
-			}
-			
-			if (command.equalsIgnoreCase("movie")){
-				MovieReader.ReadMovie();
-			}
-			if(command.equalsIgnoreCase("exit") || command.equalsIgnoreCase("q")){
-				exit = true;
-				System.out.println("Bye bye!");
+				
+				if (command.equalsIgnoreCase("movie")){
+					MovieReader.ReadMovie();
+				}
+				if(command.equalsIgnoreCase("exit") || command.equalsIgnoreCase("q")){
+					exit = true;
+					System.out.println("Bye bye!");
+				}
 			}
 		}
 		// TODO need to show help
@@ -66,7 +67,7 @@ public class CLI {
 		System.out.println("show <word>  -- shows the word on the display");
 		System.out.println("movie <moviename> -- reads file with name=moviname");
 //		System.out.println("color 0..255 0..255 0..255 [0..5] -- sets the RGB color of the number of lights");
-		System.out.println("interval <number>  -- sets the time between frames of the movie");  
+//		System.out.println("interval <number>  -- sets the time between frames of the movie");  
 //		System.out.println("USAGE");
 		System.out.println("exit / q  -- exit from the application");
 	}
