@@ -63,7 +63,13 @@ public class Display implements AutoCloseable {
 			break;
 		}
 		
-		int matrix1[][] = matrices.get(0);
+		int z = 15;
+		for (int[][] matrix : matrices) {
+			displayBlock(matrix, z, color);
+			z += 15;
+		}
+		
+		/*int matrix1[][] = matrices.get(0);
 		int matrix2[][] = matrices.get(1);
 		int matrix3[][] = matrices.get(2);
 		int matrix4[][] = matrices.get(3);
@@ -73,7 +79,7 @@ public class Display implements AutoCloseable {
 		displayBlock(matrix2, 30, color);
 		displayBlock(matrix3, 45, color);
 		displayBlock(matrix4, 60, color);
-		displayBlock(matrix5, 75, color);
+		displayBlock(matrix5, 75, color);*/
 		
 		/*
 		screen.putString(20, 10, "    *   *   *     *   *   *    *   *   *     *   *   *", foreground, Color.BLACK, ScreenCharacterStyle.Blinking);
