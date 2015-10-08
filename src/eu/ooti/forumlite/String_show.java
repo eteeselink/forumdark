@@ -1,7 +1,7 @@
 package eu.ooti.forumlite;
 
 public class String_show {
-	public static void string_show (String str) throws Exception
+	public static void string_show (String str, Display display) throws Exception
 	{
 		int matrix0[][] = {{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0}};
 		int matrix1[][] = {{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0}};
@@ -86,8 +86,8 @@ public class String_show {
 			}
 		}
 		
-		Display display = new Display();
+		//Display display = new Display();
 		display.display(matrix0, matrix1, matrix2, matrix3, matrix4);
-		display.close();	
+		//display.close();	
 	}
 }
