@@ -25,8 +25,11 @@ public class LightSimulatorTest {
 	
 	@Test
 	public void TestMovieReader() throws Exception {
-		List<String> testmovie = MovieReader.ReadFullMovie(".\\files\\Movie1.txt");
-		assertThat(testmovie.size()).isEqualTo(5);
+		List<String> testmovie = MovieReader.ReadFullMovie(".\\files\\ForUnitTestOnly.txt");
+
+		assertThat(testmovie.size()).isEqualTo(2);
+		assertThat(testmovie.get(0).length()).isEqualTo(5);
+		assertThat(testmovie.get(1).length()).isEqualTo(5);
 		
 	}
 	
