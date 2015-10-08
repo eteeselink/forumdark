@@ -3,13 +3,14 @@ package eu.ooti.forumlite;
 import com.googlecode.lanterna.screen.Screen;
 
 public class String_show {
-	public static void string_show  (String str)
-	{
+	public static void string_show  (String str) throws Exception
+	{	
 		if (str.equals("o"))
 		{
 			int result[][] = {{0,0,0,0,0},{0,1,1,1,0},{0,1,0,1,0},{0,1,1,1,0},{0,0,0,0,0}};
-			Display display;
-			display.display0(result);
+			Display display = new Display();
+			display.display(result);
+			display.close();
 		}
 		/*for( int i = 0; i<5; ++i)
 		{
