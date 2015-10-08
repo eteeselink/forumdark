@@ -41,7 +41,7 @@ public class MovieReader {
 	           for(String strLine : allMovie){
 	                String_show.string_show(strLine, display);
 	                // sleep
-	                Thread.sleep(2000);
+	                Thread.sleep(1000);
 	            }
 		 }
 		catch(Exception e){}

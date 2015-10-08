@@ -3,13 +3,13 @@ package eu.ooti.forumlite;
 public class String_show {
 	public static void string_show (String str, Display display) throws Exception
 	{
-		int matrix0[][] = null;
-		int matrix1[][] = null;
-		int matrix2[][] = null;
-		int matrix3[][] = null;
-		int matrix4[][] = null;
+		int matrix0[][] = {{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0}};
+		int matrix1[][] = {{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0}};
+		int matrix2[][] = {{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0}};
+		int matrix3[][] = {{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0}};
+		int matrix4[][] = {{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0}};
 		
-		for (int i = 0; i < 5; ++i)
+		for (int i = 0; i < str.length(); ++i)
 		{
 			int workingMatrix[][] = new int[5][5];
 						
@@ -57,6 +57,18 @@ public class String_show {
 													   {0,0,0,0,0},
 													   {0,0,1,0,0}};
 				break;
+				case '<': workingMatrix = new int[][] {{0,0,0,1,0},
+					   								   {0,0,1,0,0},
+					   								   {0,1,0,0,0},
+					   								   {0,0,1,0,0},
+					   								   {0,0,0,1,0}};
+				break;
+				case '>': workingMatrix = new int[][] {{0,1,0,0,0},
+					   								   {0,0,1,0,0},
+					   								   {0,0,0,1,0},
+					   								   {0,0,1,0,0},
+					   								   {0,1,0,0,0}};
+			    break;
 			}
 			
 			switch (i)
