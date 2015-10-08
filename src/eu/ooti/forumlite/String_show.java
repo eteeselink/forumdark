@@ -73,6 +73,13 @@ public class String_show {
 					   								   {0,0,1,0,0},
 					   								   {0,1,0,0,0}};
 			    break;
+				case ' ': workingMatrix = new int[][] {{0,0,0,0,0},
+													   {0,0,0,0,0},
+													   {0,0,0,0,0},
+													   {0,0,0,0,0},
+													   {0,0,0,0,0}};
+				break;
+
 			}
 			matrices.add(workingMatrix);
 		}
