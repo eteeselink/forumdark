@@ -18,9 +18,9 @@ public class CLI {
 
 	/**
 	 * @param args
-	 * @throws InterruptedException 
+	 * @throws Exception 
 	 */
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args) throws Exception {
 		boolean exit = false;
 		Display display = new Display();
 		printHelp();
@@ -55,6 +55,7 @@ public class CLI {
 			}
 			if(command.equalsIgnoreCase("exit") || command.equalsIgnoreCase("q")){
 				exit = true;
+				display.close();
 				System.out.println("Bye bye!");
 			}
 		}
