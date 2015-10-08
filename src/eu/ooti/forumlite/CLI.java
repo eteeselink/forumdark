@@ -20,7 +20,7 @@ public class CLI {
 	 * @param args
 	 * @throws InterruptedException 
 	 */
-	public static void main(String[] args) throws InterruptedException {
+	public void lunchCLI() throws InterruptedException {
 		boolean exit = false;
 		
 		printHelp();
