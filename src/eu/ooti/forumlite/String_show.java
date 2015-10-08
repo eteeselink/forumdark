@@ -9,7 +9,7 @@ public class String_show {
 		int matrix3[][] = null;
 		int matrix4[][] = null;
 		
-		for (int i = 0; i < 5; ++i)
+		for (int i = 0; i < str.length(); ++i)
 		{
 			int workingMatrix[][] = new int[5][5];
 						
