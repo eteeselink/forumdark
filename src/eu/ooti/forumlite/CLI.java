@@ -13,22 +13,13 @@ import java.util.StringTokenizer;
  *
  */
 public class CLI {
-<<<<<<< HEAD
-	
-	static String_show show = null;
-	Display display = new Display();
-=======
->>>>>>> 9aa04e114cb08dabedc0ab2b2be1d16654a7fd78
 
 	/**
 	 * @param args
 	 * @throws InterruptedException 
 	 */
-	public void lunchCLI() throws InterruptedException {
+	public static void main(String[] args) throws InterruptedException {
 		boolean exit = false;
-		
-		printHelp();
-		
 		while(!exit){
 			System.out.print("Input command: ");
 			Scanner scanner = new Scanner(System.in);
@@ -36,32 +27,6 @@ public class CLI {
 			System.out.println("Input >> " + strInput);
 			//multiple tokens on line
 			List<String> arguments = new ArrayList<>();
-<<<<<<< HEAD
-			if(!strInput.isEmpty()){
-				arguments = extractArgs(strInput);
-				String command = arguments.get(0);
-				if(command.equalsIgnoreCase("show")){
-	//				String_show show = new String_show();
-	//				show.string_show(arguments.get(1));	
-	//				if(show == null){
-	//					show = new String_show();
-	//				}
-	//				show.string_show(arguments.get(1));
-					try {
-						String_show.string_show(arguments.get(1), display);
-					} catch (Exception e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-				}
-				
-				if (command.equalsIgnoreCase("movie")){
-					MovieReader.ReadMovie(display);
-				}
-				if(command.equalsIgnoreCase("exit") || command.equalsIgnoreCase("q")){
-					exit = true;
-					System.out.println("Bye bye!");
-=======
 			arguments = extractArgs(strInput);
 			
 			String command = arguments.get(0);
@@ -73,20 +38,12 @@ public class CLI {
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
->>>>>>> 9aa04e114cb08dabedc0ab2b2be1d16654a7fd78
 				}
 			}
 			
 			if (command.equalsIgnoreCase("movie")){
 				MovieReader.ReadMovie();
 			}
-//			if (command.equalsIgnoreCase("moviefile")){
-//				System.out.print("Input directory: ");
-//				Scanner scannerMovie = new Scanner(System.in);
-//				String strMovie = scannerMovie.nextLine();
-//				System.out.println("Input >> " + strInput);
-//				MovieReader.ReadMovieParameter(".\\files\\Movie1.txt");
-//			}
 			if(command.equalsIgnoreCase("exit") || command.equalsIgnoreCase("q")){
 				exit = true;
 				System.out.println("Bye bye!");
@@ -96,16 +53,6 @@ public class CLI {
 		
 		
 				
-	}
-
-	private static void printHelp() {
-		System.out.println("****** HELP ******");
-		System.out.println("show <word>  -- shows the word on the display");
-		System.out.println("movie <moviename> -- reads file with name=moviname");
-//		System.out.println("color 0..255 0..255 0..255 [0..5] -- sets the RGB color of the number of lights");
-		System.out.println("interval <number>  -- sets the time between frames of the movie");  
-//		System.out.println("USAGE");
-		System.out.println("exit / q  -- exit from the application");
 	}
 
 	private static List<String> extractArgs(String strInput) {
