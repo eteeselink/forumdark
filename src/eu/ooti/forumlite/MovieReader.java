@@ -12,7 +12,7 @@ public class MovieReader {
 	        try {
 	            br = new BufferedReader( new FileReader("\\files\\Movie1.txt"));
 	            while( (strLine = br.readLine()) != null){
-	                System.out.println(strLine);
+	                //System.out.println(strLine);
 	                String_show.string_show(strLine);
 	                // sleep
 	                Thread.sleep(2000);
@@ -21,6 +21,7 @@ public class MovieReader {
 		catch(Exception e){}
 	}
 	
+	
 	public static void ReadMovieParameter(String filepath)
 	{
 		 BufferedReader br = null;
@@ -28,7 +29,7 @@ public class MovieReader {
 	        try {
 	            br = new BufferedReader( new FileReader(filepath));
 	            while( (strLine = br.readLine()) != null){
-	                System.out.println(strLine);
+	                //System.out.println(strLine);
 	                String_show.string_show(strLine);
 	                // sleep
 	                Thread.sleep(2000);
