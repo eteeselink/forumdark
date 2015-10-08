@@ -52,7 +52,12 @@ public class CLI {
 			}
 			
 			if (command.equalsIgnoreCase("movie")){
-				MovieReader.ReadMovie(display, arguments.get(1));
+				if(arguments.size() == 2){
+					MovieReader.ReadMovie(display, arguments.get(1));
+				}else{
+					MovieReader.ReadMovie(arguments.get(1), arguments.get(2), display);
+				}
+				
 			}
 			if(command.equalsIgnoreCase("exit") || command.equalsIgnoreCase("q")){
 				exit = true;
