@@ -20,5 +20,21 @@ public class MovieReader {
 	        }
 		catch(Exception e){}
 	}
+	
+	public static void ReadMovieParameter(String filepath)
+	{
+		 BufferedReader br = null;
+	        String strLine = "";
+	        try {
+	            br = new BufferedReader( new FileReader(filepath));
+	            while( (strLine = br.readLine()) != null){
+	                System.out.println(strLine);
+	                String_show.string_show(strLine);
+	                // sleep
+	                Thread.sleep(2000);
+	            }
+	        }
+		catch(Exception e){}
+	}
 
 }
