@@ -22,13 +22,27 @@ public class Display implements AutoCloseable {
 		return screen;
 	}
 
-	public void displayO() throws InterruptedException {
+	public void display(int result[][]) throws InterruptedException {
+		int k = 10;
+		for (int i = 0; i < 5; i++) {
+			String s = "    ";
+			for (int j = 0; j < 5; j++) {
+				if (result[i][j] == 1) {
+					s += "* ";
+				} else {
+					s += "  ";
+				}
+			}
+			screen.putString(20, k, s, Color.WHITE, Color.BLACK, ScreenCharacterStyle.Bold);
+			k++;
+		}
+		
 		/*screen.putString(20, 10, "    *   *   *     *   *   *    *   *   *     *   *   *", foreground, Color.BLACK, ScreenCharacterStyle.Blinking);
 		screen.putString(20, 11, "      * * *         * * *        * * *         * * *  ", foreground, Color.BLACK, ScreenCharacterStyle.Blinking);
 		screen.putString(20, 12, "    * * * * *     * * * * *    * * * * *     * * * * *", foreground, Color.BLACK, ScreenCharacterStyle.Blinking);
 		screen.putString(20, 13, "      * * *         * * *        * * *         * * *  ", foreground, Color.BLACK, ScreenCharacterStyle.Blinking);
 		screen.putString(20, 14, "    *   *   *     *   *   *    *   *   *     *   *   *", foreground, Color.BLACK, ScreenCharacterStyle.Blinking);
-		screen.refresh();*/
+		*/screen.refresh();
 		Thread.sleep(2000);
 		
 		screen.clear();

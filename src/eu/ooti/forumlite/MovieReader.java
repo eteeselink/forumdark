@@ -12,7 +12,24 @@ public class MovieReader {
 	        try {
 	            br = new BufferedReader( new FileReader("\\files\\Movie1.txt"));
 	            while( (strLine = br.readLine()) != null){
-	                System.out.println(strLine);
+	                //System.out.println(strLine);
+	                String_show.string_show(strLine);
+	                // sleep
+	                Thread.sleep(2000);
+	            }
+	        }
+		catch(Exception e){}
+	}
+	
+	
+	public static void ReadMovie(String filepath)
+	{
+		 BufferedReader br = null;
+	        String strLine = "";
+	        try {
+	            br = new BufferedReader( new FileReader(filepath));
+	            while( (strLine = br.readLine()) != null){
+	                //System.out.println(strLine);
 	                String_show.string_show(strLine);
 	                // sleep
 	                Thread.sleep(2000);
