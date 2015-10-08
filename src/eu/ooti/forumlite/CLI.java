@@ -13,8 +13,6 @@ import java.util.StringTokenizer;
  *
  */
 public class CLI {
-	
-	static String_show show = null;
 
 	/**
 	 * @param args
@@ -38,10 +36,6 @@ public class CLI {
 			if(command.equalsIgnoreCase("show")){
 //				String_show show = new String_show();
 //				show.string_show(arguments.get(1));	
-//				if(show == null){
-//					show = new String_show();
-//				}
-//				show.string_show(arguments.get(1));
 				try {
 					String_show.string_show(arguments.get(1));
 				} catch (Exception e) {
@@ -66,6 +60,9 @@ public class CLI {
 			}
 		}
 		// TODO need to show help
+		
+		
+				
 	}
 
 	private static void printHelp() {

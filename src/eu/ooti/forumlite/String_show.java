@@ -1,17 +1,13 @@
 package eu.ooti.forumlite;
 
-import com.googlecode.lanterna.screen.Screen;
-
 public class String_show {
 	public static void string_show (String str) throws Exception
 	{
-		
 		int matrix0[][] = null;
 		int matrix1[][] = null;
 		int matrix2[][] = null;
 		int matrix3[][] = null;
 		int matrix4[][] = null;
-		
 		
 		for (int i = 0; i < 5; ++i)
 		{
@@ -55,6 +51,12 @@ public class String_show {
 													   {0,0,0,0,0},
 													   {0,0,0,0,0}};
 				break;
+				case '.': workingMatrix = new int[][] {{0,0,0,0,0},
+													   {0,0,0,0,0},
+													   {0,0,0,0,0},
+													   {0,0,0,0,0},
+													   {0,0,1,0,0}};
+				break;
 			}
 			
 			switch (i)
@@ -73,9 +75,7 @@ public class String_show {
 		}
 		
 		Display display = new Display();
-//		display.display(matrix0, matrix1, matrix2, matrix3, matrix4);
-		display.display(matrix0);
-		display.close();
-		
+		display.display(matrix0, matrix1, matrix2, matrix3, matrix4);
+		display.close();	
 	}
 }
