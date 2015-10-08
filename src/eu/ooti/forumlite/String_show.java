@@ -12,7 +12,7 @@ public class String_show {
 		{
 			int result[][] = {{0,0,0,0,0},{0,1,1,1,0},{0,1,0,1,0},{0,1,1,1,0},{0,0,0,0,0}};
 			Display display = new Display();
-			display.display0(result);
+			display.display(result);
 			display.close();
 			
 		}

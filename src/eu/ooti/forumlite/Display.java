@@ -22,7 +22,7 @@ public class Display implements AutoCloseable {
 		return screen;
 	}
 
-	public void display0(int result[][]) throws InterruptedException {
+	public void display(int result[][]) throws InterruptedException {
 		int k = 10;
 		for (int i = 0; i < 5; i++) {
 			String s = "    ";
@@ -33,7 +33,7 @@ public class Display implements AutoCloseable {
 					s += "  ";
 				}
 			}
-			screen.putString(20, k, s, Color.WHITE, Color.BLACK, ScreenCharacterStyle.Blinking);
+			screen.putString(20, k, s, Color.WHITE, Color.BLACK, ScreenCharacterStyle.Bold);
 			k++;
 		}
 		
@@ -42,7 +42,7 @@ public class Display implements AutoCloseable {
 		screen.putString(20, 12, "    * * * * *     * * * * *    * * * * *     * * * * *", foreground, Color.BLACK, ScreenCharacterStyle.Blinking);
 		screen.putString(20, 13, "      * * *         * * *        * * *         * * *  ", foreground, Color.BLACK, ScreenCharacterStyle.Blinking);
 		screen.putString(20, 14, "    *   *   *     *   *   *    *   *   *     *   *   *", foreground, Color.BLACK, ScreenCharacterStyle.Blinking);
-		screen.refresh();*/
+		*/screen.refresh();
 		Thread.sleep(2000);
 		
 		screen.clear();
