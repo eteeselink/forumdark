@@ -2,40 +2,49 @@ package eu.ooti.forumlite;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MovieReader {
 	
-	public static void ReadMovie()
-	{
-		 BufferedReader br = null;
-	        String strLine = "";
-	        try {
-	            br = new BufferedReader( new FileReader("\\files\\Movie1.txt"));
-	            while( (strLine = br.readLine()) != null){
-	                //System.out.println(strLine);
-	                String_show.string_show(strLine);
-	                // sleep
-	                Thread.sleep(2000);
-	            }
-	        }
-		catch(Exception e){}
+	public static void ReadMovie(){
+			List<String> allMovie = ReadFullMovie("\\files\\Movie1.txt");
+			try {
+		           for(String strLine : allMovie){
+		                String_show.string_show(strLine);
+		                // sleep
+		                Thread.sleep(2000);
+		            }
+			 }
+			catch(Exception e){}
 	}
 	
-	
-	public static void ReadMovie(String filepath)
+	public static List<String> ReadFullMovie(String filepath)
 	{
 		 BufferedReader br = null;
+		 List<String> allMovie = new ArrayList<>();
 	        String strLine = "";
 	        try {
 	            br = new BufferedReader( new FileReader(filepath));
 	            while( (strLine = br.readLine()) != null){
-	                //System.out.println(strLine);
+	            	allMovie.add(strLine);
+	            }
+	        }
+		catch(Exception e){}
+	        return allMovie;
+	}
+	
+	public static void ReadMovie(String filepath)
+	{
+		List<String> allMovie = ReadFullMovie(filepath);
+		try {
+	           for(String strLine : allMovie){
 	                String_show.string_show(strLine);
 	                // sleep
 	                Thread.sleep(2000);
 	            }
-	        }
+		 }
 		catch(Exception e){}
 	}
-
+	
 }
