@@ -11,6 +11,8 @@ public class Main {
 			sim.displaySomething(Color.GREEN);
 			Thread.sleep(200);
 			sim.displaySomething(Color.YELLOW);
+			/*String_show show = new String_show()) {
+			String_show.string_show("o");*/
 		}
 	}
 
