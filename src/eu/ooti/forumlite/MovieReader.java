@@ -13,7 +13,7 @@ public class MovieReader {
 		           for(String strLine : allMovie){
 		                String_show.string_show(strLine, colour, display);
 		                // sleep
-		                Thread.sleep(2000);
+		              //  Thread.sleep(500);
 		            }
 			 }
 			catch(Exception e){}
@@ -41,7 +41,7 @@ public class MovieReader {
 	           for(String strLine : allMovie){
 	                String_show.string_show(strLine, colour, display);
 	                // sleep
-	                Thread.sleep(1000);
+	               // Thread.sleep(500);
 	            }
 		 }
 		catch(Exception e){}
