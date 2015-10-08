@@ -53,6 +53,12 @@ public class String_show {
 													   {0,0,0,0,0},
 													   {0,0,0,0,0}};
 				break;
+				case '.': workingMatrix = new int[][] {{0,0,0,0,0},
+													   {0,0,0,0,0},
+													   {0,0,0,0,0},
+													   {0,0,0,0,0},
+													   {0,0,1,0,0}};
+				break;
 			}
 			
 			switch (i)
@@ -71,9 +77,8 @@ public class String_show {
 		}
 		
 		Display display = new Display();
-//		display.display(matrix0, matrix1, matrix2, matrix3, matrix4);
-		display.display(matrix0);
-		display.close();
-		
+		display.display(matrix0, matrix1, matrix2, matrix3, matrix4);
+//		display.display(matrix0);
+		display.close();	
 	}
 }
