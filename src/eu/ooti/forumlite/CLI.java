@@ -43,7 +43,7 @@ public class CLI {
 //				}
 //				show.string_show(arguments.get(1));
 				try {
-					String_show.string_show(arguments.get(1),display);
+					String_show.string_show(arguments.get(1),arguments.get(2),display);
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
