@@ -13,6 +13,11 @@ import java.util.StringTokenizer;
  *
  */
 public class CLI {
+<<<<<<< HEAD
+=======
+	
+	static String_show show = null;
+>>>>>>> 4e93ba4db1e9a1b88b3695e73daea73fc1aa1d48
 
 	/**
 	 * @param args
@@ -20,6 +25,12 @@ public class CLI {
 	 */
 	public static void main(String[] args) throws InterruptedException {
 		boolean exit = false;
+<<<<<<< HEAD
+=======
+		Display display = new Display();
+		printHelp();
+		
+>>>>>>> 4e93ba4db1e9a1b88b3695e73daea73fc1aa1d48
 		while(!exit){
 			System.out.print("Input command: ");
 			Scanner scanner = new Scanner(System.in);
@@ -33,8 +44,12 @@ public class CLI {
 			if(command.equalsIgnoreCase("show")){
 //				String_show show = new String_show();
 //				show.string_show(arguments.get(1));	
+//				if(show == null){
+//					show = new String_show();
+//				}
+//				show.string_show(arguments.get(1));
 				try {
-					String_show.string_show(arguments.get(1));
+					String_show.string_show(arguments.get(1),display);
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -42,7 +57,7 @@ public class CLI {
 			}
 			
 			if (command.equalsIgnoreCase("movie")){
-				MovieReader.ReadMovie();
+				MovieReader.ReadMovie(display);
 			}
 			if(command.equalsIgnoreCase("exit") || command.equalsIgnoreCase("q")){
 				exit = true;
@@ -50,11 +65,21 @@ public class CLI {
 			}
 		}
 		// TODO need to show help
-		
-		
-				
 	}
 
+<<<<<<< HEAD
+=======
+	private static void printHelp() {
+		System.out.println("****** HELP ******");
+		System.out.println("show <word>  -- shows the word on the display");
+		System.out.println("movie <moviename> -- reads file with name=moviname");
+//		System.out.println("color 0..255 0..255 0..255 [0..5] -- sets the RGB color of the number of lights");
+//		System.out.println("interval <number>  -- sets the time between frames of the movie");  
+//		System.out.println("USAGE");
+		System.out.println("exit / q  -- exit from the application");
+	}
+
+>>>>>>> 4e93ba4db1e9a1b88b3695e73daea73fc1aa1d48
 	private static List<String> extractArgs(String strInput) {
 		List<String> result = new ArrayList<>();
 		StringTokenizer tokenizer = new StringTokenizer(strInput);
