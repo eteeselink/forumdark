@@ -49,7 +49,7 @@ public class CLI {
 			}
 			
 			if (command.equalsIgnoreCase("movie")){
-				MovieReader.ReadMovie(display, "red");
+				MovieReader.ReadMovie(display, arguments.get(1));
 			}
 			if(command.equalsIgnoreCase("exit") || command.equalsIgnoreCase("q")){
 				exit = true;

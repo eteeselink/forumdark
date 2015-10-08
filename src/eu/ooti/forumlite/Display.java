@@ -81,7 +81,7 @@ public class Display implements AutoCloseable {
 		screen.putString(20, 13, "      * * *         * * *        * * *         * * *  ", foreground, Color.BLACK, ScreenCharacterStyle.Blinking);
 		screen.putString(20, 14, "    *   *   *     *   *   *    *   *   *     *   *   *", foreground, Color.BLACK, ScreenCharacterStyle.Blinking);
 		*/screen.refresh();
-		Thread.sleep(4000);
+		Thread.sleep(500);
 		
 		screen.clear();
 		screen.refresh();
