@@ -79,6 +79,6 @@ public class String_show {
 		Display display = new Display();
 		display.display(matrix0, matrix1, matrix2, matrix3, matrix4);
 //		display.display(matrix0);
-		display.close();	
+		display.close();
 	}
 }
