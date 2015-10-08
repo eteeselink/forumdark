@@ -11,6 +11,8 @@ public class String_show {
 		int matrix3[][] = {{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0}};
 		int matrix4[][] = {{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0}};
 		
+		ArrayList<int[][]> matrices = new ArrayList<int[][]>();
+		
 		for (int i = 0; i < str.length(); ++i)
 		{
 			int workingMatrix[][] = new int[5][5];
@@ -73,29 +75,10 @@ public class String_show {
 			    break;
 			}
 			
-			switch (i)
-			{
-			case 0: matrix0 = workingMatrix;
-			break;
-			case 1: matrix1 = workingMatrix;
-			break;
-			case 2: matrix2 = workingMatrix;
-			break;
-			case 3: matrix3 = workingMatrix;
-			break;
-			case 4: matrix4 = workingMatrix;
-			break;
-			}
+			matrices.add(workingMatrix);
 		}
-		
-		ArrayList<int[][]> list = new ArrayList<int[][]>();
-		list.add(matrix0);
-		list.add(matrix1);
-		list.add(matrix2);
-		list.add(matrix3);
-		list.add(matrix4);
 
-		return list;
+		return matrices;
 	}
 	public static void string_show (String str, Display display) throws Exception
 	{

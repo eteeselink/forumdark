@@ -14,5 +14,13 @@ public class StringShowTest {
 		assertThat(matrices.size()).isEqualTo(5);
 		assertThat(matrices.get(0)[0][0]).isEqualTo(1);
 	}
+	
+	@Test
+	public void testMakeMoreCharacters() throws Exception {
+		List<int[][]> matrices = String_show.makeCharacters("Oo. .oO");
+		assertThat(matrices.size()).isEqualTo(7);
+		assertThat(matrices.get(0)[0][0]).isEqualTo(1);
+		assertThat(matrices.get(6)[0]).containsOnly(1);
+	}
 
 }
