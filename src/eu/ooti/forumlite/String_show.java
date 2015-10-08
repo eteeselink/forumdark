@@ -1,7 +1,5 @@
 package eu.ooti.forumlite;
 
-import com.googlecode.lanterna.screen.Screen;
-
 public class String_show {
 	public static void string_show (String str) throws Exception
 	{
@@ -78,7 +76,6 @@ public class String_show {
 		
 		Display display = new Display();
 		display.display(matrix0, matrix1, matrix2, matrix3, matrix4);
-//		display.display(matrix0);
 		display.close();	
 	}
 }
