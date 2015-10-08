@@ -36,12 +36,10 @@ public class CLI {
 			
 			String command = arguments.get(0);
 			if(command.equalsIgnoreCase("show")){
-//				String_show show = new String_show();
-//				show.string_show(arguments.get(1));	
-//				if(show == null){
-//					show = new String_show();
-//				}
-//				show.string_show(arguments.get(1));
+				/*
+				 *  - check number of arguments
+				 * - check if there is color param, use default if not
+				 */
 				try {
 					String_show.string_show(arguments.get(1),arguments.get(2),display);
 				} catch (Exception e) {
