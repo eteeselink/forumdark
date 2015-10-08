@@ -22,28 +22,43 @@ public class Display implements AutoCloseable {
 		return screen;
 	}
 
-	public void display(int result[][]) throws InterruptedException {
+	private void displayBlock(int matrix[][], int x) {
 		int k = 10;
 		for (int i = 0; i < 5; i++) {
-			String s = "    ";
+			String s = " ";
 			for (int j = 0; j < 5; j++) {
-				if (result[i][j] == 1) {
+				if (matrix[i][j] == 1) {
 					s += "* ";
 				} else {
 					s += "  ";
 				}
 			}
-			screen.putString(20, k, s, Color.WHITE, Color.BLACK, ScreenCharacterStyle.Bold);
+			screen.putString(x, k, s, Color.WHITE, Color.BLACK, ScreenCharacterStyle.Bold);
 			k++;
 		}
+	}
+	
+	public void display(
+			int matrix1[][], 
+			int matrix2[][], 
+			int matrix3[][],
+			int matrix4[][],
+			int matrix5[][]) throws InterruptedException {
 		
-		/*screen.putString(20, 10, "    *   *   *     *   *   *    *   *   *     *   *   *", foreground, Color.BLACK, ScreenCharacterStyle.Blinking);
+		displayBlock(matrix1, 15);
+		displayBlock(matrix2, 30);
+		displayBlock(matrix3, 45);
+		displayBlock(matrix4, 60);
+		displayBlock(matrix5, 75);
+		
+		/*
+		screen.putString(20, 10, "    *   *   *     *   *   *    *   *   *     *   *   *", foreground, Color.BLACK, ScreenCharacterStyle.Blinking);
 		screen.putString(20, 11, "      * * *         * * *        * * *         * * *  ", foreground, Color.BLACK, ScreenCharacterStyle.Blinking);
 		screen.putString(20, 12, "    * * * * *     * * * * *    * * * * *     * * * * *", foreground, Color.BLACK, ScreenCharacterStyle.Blinking);
 		screen.putString(20, 13, "      * * *         * * *        * * *         * * *  ", foreground, Color.BLACK, ScreenCharacterStyle.Blinking);
 		screen.putString(20, 14, "    *   *   *     *   *   *    *   *   *     *   *   *", foreground, Color.BLACK, ScreenCharacterStyle.Blinking);
 		*/screen.refresh();
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 		
 		screen.clear();
 		screen.refresh();
