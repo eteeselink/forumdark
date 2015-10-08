@@ -13,13 +13,18 @@ import java.util.StringTokenizer;
  *
  */
 public class CLI {
+	
+	static String_show show = null;
 
 	/**
 	 * @param args
 	 * @throws InterruptedException 
 	 */
-	public static void main(String[] args) throws InterruptedException {
+	public void lunchCLI() throws InterruptedException {
 		boolean exit = false;
+		
+		printHelp();
+		
 		while(!exit){
 			System.out.print("Input command: ");
 			Scanner scanner = new Scanner(System.in);
@@ -33,6 +38,10 @@ public class CLI {
 			if(command.equalsIgnoreCase("show")){
 //				String_show show = new String_show();
 //				show.string_show(arguments.get(1));	
+//				if(show == null){
+//					show = new String_show();
+//				}
+//				show.string_show(arguments.get(1));
 				try {
 					String_show.string_show(arguments.get(1));
 				} catch (Exception e) {
@@ -50,9 +59,16 @@ public class CLI {
 			}
 		}
 		// TODO need to show help
-		
-		
-				
+	}
+
+	private static void printHelp() {
+		System.out.println("****** HELP ******");
+		System.out.println("show <word>  -- shows the word on the display");
+		System.out.println("movie <moviename> -- reads file with name=moviname");
+//		System.out.println("color 0..255 0..255 0..255 [0..5] -- sets the RGB color of the number of lights");
+		System.out.println("interval <number>  -- sets the time between frames of the movie");  
+//		System.out.println("USAGE");
+		System.out.println("exit / q  -- exit from the application");
 	}
 
 	private static List<String> extractArgs(String strInput) {
