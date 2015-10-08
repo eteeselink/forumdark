@@ -7,11 +7,11 @@ import java.util.List;
 
 public class MovieReader {
 	
-	public static void ReadMovie(){
+	public static void ReadMovie(Display display){
 			List<String> allMovie = ReadFullMovie(".\\files\\Movie1.txt");
 			try {
 		           for(String strLine : allMovie){
-		                String_show.string_show(strLine);
+		                String_show.string_show(strLine, display);
 		                // sleep
 		                Thread.sleep(2000);
 		            }
@@ -34,12 +34,12 @@ public class MovieReader {
 	        return allMovie;
 	}
 	
-	public static void ReadMovie(String filepath)
+	public static void ReadMovie(String filepath, Display display)
 	{
 		List<String> allMovie = ReadFullMovie(filepath);
 		try {
 	           for(String strLine : allMovie){
-	                String_show.string_show(strLine);
+	                String_show.string_show(strLine, display);
 	                // sleep
 	                Thread.sleep(2000);
 	            }

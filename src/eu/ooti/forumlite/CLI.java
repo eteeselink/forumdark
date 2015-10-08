@@ -15,6 +15,7 @@ import java.util.StringTokenizer;
 public class CLI {
 	
 	static String_show show = null;
+	Display display = new Display();
 
 	/**
 	 * @param args
@@ -43,7 +44,7 @@ public class CLI {
 	//				}
 	//				show.string_show(arguments.get(1));
 					try {
-						String_show.string_show(arguments.get(1));
+						String_show.string_show(arguments.get(1), display);
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
@@ -51,7 +52,7 @@ public class CLI {
 				}
 				
 				if (command.equalsIgnoreCase("movie")){
-					MovieReader.ReadMovie();
+					MovieReader.ReadMovie(display);
 				}
 				if(command.equalsIgnoreCase("exit") || command.equalsIgnoreCase("q")){
 					exit = true;
