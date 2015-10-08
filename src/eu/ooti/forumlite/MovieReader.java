@@ -22,7 +22,7 @@ public class MovieReader {
 	}
 	
 	
-	public static void ReadMovieParameter(String filepath)
+	public static void ReadMovie(String filepath)
 	{
 		 BufferedReader br = null;
 	        String strLine = "";
