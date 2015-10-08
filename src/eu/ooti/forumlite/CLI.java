@@ -41,6 +41,9 @@ public class CLI {
 				 * - check if there is color param, use default if not
 				 */
 				try {
+					if(arguments.size() == 2){
+						arguments.add("white");
+					}
 					String_show.string_show(arguments.get(1),arguments.get(2),display);
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
