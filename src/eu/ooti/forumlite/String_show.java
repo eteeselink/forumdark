@@ -1,7 +1,5 @@
 package eu.ooti.forumlite;
 
-import static java.lang.System.out;
-
 import com.googlecode.lanterna.screen.Screen;
 
 public class String_show {
@@ -57,9 +55,6 @@ public class String_show {
 													   {0,0,0,0,0},
 													   {0,0,0,0,0}};
 				break;
-
-
-					
 			}
 			
 			switch (i)
@@ -75,36 +70,12 @@ public class String_show {
 			case 4: matrix4 = workingMatrix;
 			break;
 			}
-			
-			
 		}
 		
-		
 		Display display = new Display();
-//		display.display0(matrix0, matrix1, matrix2, matrix3, matrix4);
-		display.display0(matrix0);
+//		display.display(matrix0, matrix1, matrix2, matrix3, matrix4);
+		display.display(matrix0);
 		display.close();
 		
-		
-		
-		
-		
-//		if (str.equals("o"))
-//		{
-//			int result[][] = {{0,0,0,0,0},{0,1,1,1,0},{0,1,0,1,0},{0,1,1,1,0},{0,0,0,0,0}};
-//			
-//			
-//		}
-//		
-//		
-		
-		/*for( int i = 0; i<5; ++i)
-		{
-			for(int j=0; j<5; ++j)
-			{
-				out.print(result[i][j] + " ");
-			}
-			out.println();
-		}*/
 	}
 }
