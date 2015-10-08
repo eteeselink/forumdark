@@ -1,13 +1,17 @@
 package eu.ooti.forumlite;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class String_show {
-	public static void string_show (String str, Display display) throws Exception
-	{
+	public static List<int[][]> makeCharacters(String str) throws Exception {
 		int matrix0[][] = {{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0}};
 		int matrix1[][] = {{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0}};
 		int matrix2[][] = {{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0}};
 		int matrix3[][] = {{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0}};
 		int matrix4[][] = {{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0}};
+		
+		ArrayList<int[][]> matrices = new ArrayList<int[][]>();
 		
 		for (int i = 0; i < str.length(); ++i)
 		{
@@ -71,23 +75,17 @@ public class String_show {
 			    break;
 			}
 			
-			switch (i)
-			{
-			case 0: matrix0 = workingMatrix;
-			break;
-			case 1: matrix1 = workingMatrix;
-			break;
-			case 2: matrix2 = workingMatrix;
-			break;
-			case 3: matrix3 = workingMatrix;
-			break;
-			case 4: matrix4 = workingMatrix;
-			break;
-			}
+			matrices.add(workingMatrix);
 		}
+
+		return matrices;
+	}
+	public static void string_show (String str, Display display) throws Exception
+	{
+		List<int[][]> matrices = makeCharacters(str);
 		
 		//Display display = new Display();
-		display.display(matrix0, matrix1, matrix2, matrix3, matrix4);
+		display.display(matrices.get(0),matrices.get(1), matrices.get(2), matrices.get(3), matrices.get(4));
 		//display.close();	
 	}
 }
