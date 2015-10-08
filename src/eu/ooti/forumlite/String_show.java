@@ -1,8 +1,10 @@
 package eu.ooti.forumlite;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class String_show {
-	public static void string_show (String str, Display display) throws Exception
-	{
+	public static List<int[][]> makeCharacters(String str) throws Exception {
 		int matrix0[][] = {{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0}};
 		int matrix1[][] = {{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0}};
 		int matrix2[][] = {{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0}};
@@ -86,8 +88,21 @@ public class String_show {
 			}
 		}
 		
+		ArrayList<int[][]> list = new ArrayList<int[][]>();
+		list.add(matrix0);
+		list.add(matrix1);
+		list.add(matrix2);
+		list.add(matrix3);
+		list.add(matrix4);
+
+		return list;
+	}
+	public static void string_show (String str, Display display) throws Exception
+	{
+		List<int[][]> matrices = makeCharacters(str);
+		
 		//Display display = new Display();
-		display.display(matrix0, matrix1, matrix2, matrix3, matrix4);
+		display.display(matrices.get(0),matrices.get(1), matrices.get(2), matrices.get(3), matrices.get(4));
 		//display.close();	
 	}
 }
