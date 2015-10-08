@@ -37,7 +37,7 @@ public class MovieReader {
 	
 	public static void ReadMovie(String filepath, String colour, Display display)
 	{
-		List<String> allMovie = ReadFullMovie(filepath);
+		List<String> allMovie = ReadFullMovie(".\\files\\"+filepath);
 		try {
 	           for(String strLine : allMovie){
 	                String_show.string_show(strLine, colour, display);

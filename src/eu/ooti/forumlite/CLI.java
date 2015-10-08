@@ -69,9 +69,11 @@ public class CLI {
 	}
 
 	private static void printHelp() {
-		System.out.println("****** HELP ******");
-		System.out.println("show <word>  -- shows the word on the display");
-		System.out.println("movie <moviename> -- reads file with name=moviname");
+		System.out.println("======================== HELP ========================");
+		System.out.println("show <word>                  -- shows the word on the display on white");
+		System.out.println("show <word> <color>          -- shows the word on the display with the specific color");
+		System.out.println("movie <color>      		     -- reads file with name=moviename");
+		System.out.println("movie <filename> <color>      -- reads file with name=moviename");
 //		System.out.println("color 0..255 0..255 0..255 [0..5] -- sets the RGB color of the number of lights");
 //		System.out.println("interval <number>  -- sets the time between frames of the movie");  
 //		System.out.println("USAGE");
