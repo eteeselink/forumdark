@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.StringTokenizer;
 
 public class MovieReader {
 	
@@ -40,6 +41,37 @@ public class MovieReader {
 		try {
 	           for(String strLine : allMovie){
 	                String_show.string_show(strLine, colour, display);
+	                // sleep
+	               // Thread.sleep(500);
+	            }
+		 }
+		catch(Exception e){}
+	}
+	
+	
+	/*
+	 * this should be able to read files with 
+	 * word@color   
+	 * Example:
+	 *  oOooO@red
+	 *  oOooO@blue
+	 *  
+	 *  
+	 *  Updatable:
+	 *  oOooO@rrbbw   // red,red,blue,blue,white
+	 */
+	public static void coloredMovie(String filepath, String colour, Display display)
+	{
+		List<String> allMovie = ReadFullMovie(filepath);
+		try {
+				String word = "";
+				String color = "";
+				
+	           for(String strLine : allMovie){
+	        	   StringTokenizer tk = new StringTokenizer(strLine,"@");
+	        	   word = tk.nextToken();
+	        	   color = tk.nextToken();
+	               String_show.string_show(word, color, display);
 	                // sleep
 	               // Thread.sleep(500);
 	            }
