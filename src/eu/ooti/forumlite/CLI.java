@@ -13,11 +13,8 @@ import java.util.StringTokenizer;
  *
  */
 public class CLI {
-<<<<<<< HEAD
-=======
 	
 	static String_show show = null;
->>>>>>> 4e93ba4db1e9a1b88b3695e73daea73fc1aa1d48
 
 	/**
 	 * @param args
@@ -25,12 +22,9 @@ public class CLI {
 	 */
 	public static void main(String[] args) throws InterruptedException {
 		boolean exit = false;
-<<<<<<< HEAD
-=======
 		Display display = new Display();
 		printHelp();
 		
->>>>>>> 4e93ba4db1e9a1b88b3695e73daea73fc1aa1d48
 		while(!exit){
 			System.out.print("Input command: ");
 			Scanner scanner = new Scanner(System.in);
@@ -67,8 +61,6 @@ public class CLI {
 		// TODO need to show help
 	}
 
-<<<<<<< HEAD
-=======
 	private static void printHelp() {
 		System.out.println("****** HELP ******");
 		System.out.println("show <word>  -- shows the word on the display");
@@ -79,7 +71,6 @@ public class CLI {
 		System.out.println("exit / q  -- exit from the application");
 	}
 
->>>>>>> 4e93ba4db1e9a1b88b3695e73daea73fc1aa1d48
 	private static List<String> extractArgs(String strInput) {
 		List<String> result = new ArrayList<>();
 		StringTokenizer tokenizer = new StringTokenizer(strInput);
