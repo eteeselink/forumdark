@@ -63,6 +63,12 @@ public class String_show {
 					   								   {0,0,1,0,0},
 					   								   {0,0,0,1,0}};
 				break;
+				case '>': workingMatrix = new int[][] {{0,1,0,0,0},
+					   								   {0,0,1,0,0},
+					   								   {0,0,0,1,0},
+					   								   {0,0,1,0,0},
+					   								   {0,1,0,0,0}};
+			    break;
 			}
 			
 			switch (i)
