@@ -48,7 +48,8 @@ public class Display implements AutoCloseable {
 			int matrix5[][]*/ List<int[][]> matrices, String col) throws InterruptedException {
 		
 		com.googlecode.lanterna.terminal.Terminal.Color color = Color.WHITE;
-		
+		screen.clear();
+		screen.refresh();
 		
 		switch (col) {
 		case "red": // blue
@@ -81,9 +82,7 @@ public class Display implements AutoCloseable {
 		screen.putString(20, 13, "      * * *         * * *        * * *         * * *  ", foreground, Color.BLACK, ScreenCharacterStyle.Blinking);
 		screen.putString(20, 14, "    *   *   *     *   *   *    *   *   *     *   *   *", foreground, Color.BLACK, ScreenCharacterStyle.Blinking);
 		*/screen.refresh();
-		Thread.sleep(500);
+//		Thread.sleep(500);
 		
-		screen.clear();
-		screen.refresh();
 	}
 }
