@@ -23,8 +23,8 @@ public class LightSimulatorTest {
 		}
 	}
 	
-	@Test
-	public void TestMovieReader() throws Exception {
+	//@Test
+	//public void TestMovieReader() throws Exception {
 //		List<String> testmovie = MovieReader.ReadFullMovie(".\\files\\ForUnitTestOnly.txt");
 //
 //		assertThat(testmovie.size()).isEqualTo(2);
@@ -36,7 +36,7 @@ public class LightSimulatorTest {
 //			assertThat(testmovie.get(0).charAt(i)).isEqualTo('0');
 //		}
 		
-	}
+	//}
 	
 //  The unit test below fails. Uncomment it if you want to see how CircleCI reacts
 //  to a failing test.
