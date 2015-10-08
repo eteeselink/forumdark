@@ -44,6 +44,13 @@ public class CLI {
 			if (command.equalsIgnoreCase("movie")){
 				MovieReader.ReadMovie();
 			}
+//			if (command.equalsIgnoreCase("moviefile")){
+//				System.out.print("Input directory: ");
+//				Scanner scannerMovie = new Scanner(System.in);
+//				String strMovie = scannerMovie.nextLine();
+//				System.out.println("Input >> " + strInput);
+//				MovieReader.ReadMovieParameter(".\\files\\Movie1.txt");
+//			}
 			if(command.equalsIgnoreCase("exit") || command.equalsIgnoreCase("q")){
 				exit = true;
 				System.out.println("Bye bye!");
