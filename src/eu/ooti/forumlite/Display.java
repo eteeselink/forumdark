@@ -1,5 +1,7 @@
 package eu.ooti.forumlite;
 
+import java.util.List;
+
 import com.googlecode.lanterna.TerminalFacade;
 import com.googlecode.lanterna.screen.Screen;
 import com.googlecode.lanterna.screen.ScreenCharacterStyle;
@@ -22,7 +24,7 @@ public class Display implements AutoCloseable {
 		return screen;
 	}
 
-	private void displayBlock(int matrix[][], int x) {
+	private void displayBlock(int matrix[][], int x, com.googlecode.lanterna.terminal.Terminal.Color color) {
 		int k = 10;
 		for (int i = 0; i < 5; i++) {
 			String s = " ";
@@ -33,23 +35,44 @@ public class Display implements AutoCloseable {
 					s += "  ";
 				}
 			}
-			screen.putString(x, k, s, Color.WHITE, Color.BLACK, ScreenCharacterStyle.Bold);
+			screen.putString(x, k, s, color, Color.BLACK, ScreenCharacterStyle.Bold);
 			k++;
 		}
 	}
 	
 	public void display(
-			int matrix1[][], 
+			/*int matrix1[][], 
 			int matrix2[][], 
 			int matrix3[][],
 			int matrix4[][],
-			int matrix5[][]) throws InterruptedException {
+			int matrix5[][]*/ List<int[][]> matrices, String col) throws InterruptedException {
 		
-		displayBlock(matrix1, 15);
-		displayBlock(matrix2, 30);
-		displayBlock(matrix3, 45);
-		displayBlock(matrix4, 60);
-		displayBlock(matrix5, 75);
+		com.googlecode.lanterna.terminal.Terminal.Color color = Color.WHITE;
+		
+		
+		switch (col) {
+		case "red": // blue
+			color = Color.RED;
+			break;
+		case "green": // blue
+			color = Color.GREEN;
+			break;
+		case "blue": // blue
+			color = Color.BLUE;
+			break;
+		}
+		
+		int matrix1[][] = matrices.get(0);
+		int matrix2[][] = matrices.get(1);
+		int matrix3[][] = matrices.get(2);
+		int matrix4[][] = matrices.get(3);
+		int matrix5[][] = matrices.get(4);
+		
+		displayBlock(matrix1, 15, color);
+		displayBlock(matrix2, 30, color);
+		displayBlock(matrix3, 45, color);
+		displayBlock(matrix4, 60, color);
+		displayBlock(matrix5, 75, color);
 		
 		/*
 		screen.putString(20, 10, "    *   *   *     *   *   *    *   *   *     *   *   *", foreground, Color.BLACK, ScreenCharacterStyle.Blinking);

@@ -43,7 +43,9 @@ public class CLI {
 //				}
 //				show.string_show(arguments.get(1));
 				try {
+
 					String_show.string_show(arguments.get(1), arguments.get(2),display);
+
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -51,7 +53,7 @@ public class CLI {
 			}
 			
 			if (command.equalsIgnoreCase("movie")){
-				MovieReader.ReadMovie(display);
+				MovieReader.ReadMovie(display, arguments.get(2));
 			}
 			if(command.equalsIgnoreCase("exit") || command.equalsIgnoreCase("q")){
 				exit = true;
