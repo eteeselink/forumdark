@@ -8,7 +8,7 @@ import java.util.List;
 public class MovieReader {
 	
 	public static void ReadMovie(){
-			List<String> allMovie = ReadFullMovie("\\files\\Movie1.txt");
+			List<String> allMovie = ReadFullMovie(".\\files\\Movie1.txt");
 			try {
 		           for(String strLine : allMovie){
 		                String_show.string_show(strLine);

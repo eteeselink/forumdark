@@ -2,6 +2,9 @@ package eu.ooti.forumlite;
 
 import static org.assertj.core.api.Assertions.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.junit.Test;
 
 import com.googlecode.lanterna.screen.Screen;
@@ -18,6 +21,13 @@ public class LightSimulatorTest {
 			assertThat(size.getRows()).isGreaterThan(10);
 			System.out.println("hi");
 		}
+	}
+	
+	@Test
+	public void TestMovieReader() throws Exception {
+		List<String> testmovie = MovieReader.ReadFullMovie(".\\files\\Movie1.txt");
+		assertThat(testmovie.size()).isEqualTo(5);
+		
 	}
 	
 //  The unit test below fails. Uncomment it if you want to see how CircleCI reacts
